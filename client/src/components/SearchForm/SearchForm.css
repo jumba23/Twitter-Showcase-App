@@ -1,0 +1,20 @@
+#search-form {
+  position: fixed;
+  top: 5vh;
+  left: 72vw;
+  padding-right: 5vw;
+ }
+
+#search-param {
+  width: 15vw;
+  color: black;
+  border: none;
+  opacity: 0.6;
+  padding:0rem;
+}
+
+#search-button {
+  background-color: rgb(103, 103, 156);
+  width: 30px;
+  border: none;
+}
