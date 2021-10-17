@@ -1,0 +1,23 @@
+#nav-bar-container{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.nav-selection{
+    height: 8vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.selected{
+    border-bottom: 3px solid rgb(255, 252, 252);
+}
+
