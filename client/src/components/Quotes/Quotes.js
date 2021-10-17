@@ -108,7 +108,6 @@ const Quote = () => {
     const i = Math.floor(Math.random() * 18);
     quoteText = quotesCollection[i].quote;
     quoteAuthor = quotesCollection[i].author;
-    console.log(i, quoteText, quoteAuthor);
   };
 
   getRandomQuote();
