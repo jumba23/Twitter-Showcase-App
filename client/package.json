@@ -42,5 +42,8 @@
   },
   "devDependencies": {
     "cra-build-watch": "^3.4.0"
+  },
+  "engines": {
+    "node": "14.18.1"
   }
 }
