@@ -625,7 +625,7 @@ const FavoritesPage = () => {
   const [tweetUserInfo, setTweetUserInfo] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
   const [userId, setUserId] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (userId != "") {
+    if (userId !== "") {
       gettweetData();
     }
   }, [userId]);
@@ -652,7 +652,7 @@ const FavoritesPage = () => {
         return;
       } else {
         tweetIncludesMediaArray.forEach(e => {
-          if (e.media_key == tweet.attachments.media_keys[0]) {
+          if (e.media_key === tweet.attachments.media_keys[0]) {
             array.push({
               id: tweet.id,
               profile_pic: tweetUserInfo.profile_image_url,
@@ -861,7 +861,7 @@ const SearchPage = () => {
       fileName: _jsxFileName,
       lineNumber: 68,
       columnNumber: 7
-    }, undefined), error != "" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+    }, undefined), error !== "" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
       id: "error",
       children: "Please check the screen name you entered and try again"
     }, void 0, false, {
@@ -1206,7 +1206,7 @@ const TweetCardV1 = ({
         children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
           id: "user-profile-img",
           src: tweet.profile_pic,
-          alt: "Twitter user's profile image"
+          alt: "Twitter user's profile"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 10,
@@ -1220,6 +1220,7 @@ const TweetCardV1 = ({
           columnNumber: 13
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("a", {
           href: `https://twitter.com/${tweet.userName}`,
+          rel: "noreferrer",
           id: "screen-name",
           target: "_blank",
           children: ["@", tweet.userName]
@@ -1237,20 +1238,21 @@ const TweetCardV1 = ({
         children: [tweet.text, " "]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 11
-      }, undefined), tweet.pic_url != "" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+      }, undefined), tweet.pic_url !== "" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         id: "tweet-media",
         children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
-          src: tweet.pic_url
+          src: tweet.pic_url,
+          alt: ""
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 27,
+          lineNumber: 28,
           columnNumber: 15
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 26,
+        lineNumber: 27,
         columnNumber: 13
       }, undefined) : null, /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         id: "tweet-metrics",
@@ -1258,35 +1260,35 @@ const TweetCardV1 = ({
           id: "tweet-like",
           children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaHeart"], {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 32,
+            lineNumber: 33,
             columnNumber: 15
           }, undefined), " ", tweet.likes, " "]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 32,
           columnNumber: 13
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
           id: "tweet-retweet",
           children: [" ", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaRetweet"], {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 15
           }, undefined), " ", tweet.retweet]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 34,
+          lineNumber: 35,
           columnNumber: 13
         }, undefined)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 30,
+        lineNumber: 31,
         columnNumber: 11
       }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
         id: "tweet-date",
         children: ["Date: ", tweet.created_date, " "]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 39,
+        lineNumber: 40,
         columnNumber: 11
       }, undefined)]
     }, tweet.id, true, {
@@ -1363,7 +1365,7 @@ const TweetCardV2 = ({
         children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("img", {
           id: "user-profile-img",
           src: tweet.profile_pic,
-          alt: "Twitter user's profile image"
+          alt: "Twitter user's profile"
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 9,
@@ -1378,6 +1380,7 @@ const TweetCardV2 = ({
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("a", {
           href: `https://twitter.com/${tweet.userName}`,
           id: "screen-name",
+          rel: "noreferrer",
           target: "_blank",
           children: ["@", tweet.userName]
         }, void 0, true, {
@@ -1394,33 +1397,35 @@ const TweetCardV2 = ({
         children: tweet.text
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 11
       }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
         id: "tweet-media",
         children: tweet.mediaType === "photo" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("img", {
-          src: tweet.pic_url
+          src: tweet.pic_url,
+          alt: ""
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 26,
+          lineNumber: 27,
           columnNumber: 15
         }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("img", {
-          src: tweet.vid_url
+          src: tweet.vid_url,
+          alt: ""
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 29,
           columnNumber: 15
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 11
       }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
         id: "tweet-date",
         children: ["Date: ", tweet.created_date, " "]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 31,
+        lineNumber: 32,
         columnNumber: 11
       }, undefined)]
     }, tweet.id, true, {

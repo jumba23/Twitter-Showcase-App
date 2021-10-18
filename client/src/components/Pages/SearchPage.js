@@ -66,7 +66,7 @@ const SearchPage = () => {
   return (
     <div id="search-page">
       <SearchForm handleSubmit={handleSubmit} />
-      {error != "" ? (
+      {error !== "" ? (
         <div id="error">
           Please check the screen name you entered and try again
         </div>

@@ -14,7 +14,7 @@ const FavoritesPage = () => {
   const [userId, setUserId] = useState("");
 
   useEffect(() => {
-    if (userId != "") {
+    if (userId !== "") {
       gettweetData();
     }
   }, [userId]);
@@ -40,7 +40,7 @@ const FavoritesPage = () => {
         return;
       } else {
         tweetIncludesMediaArray.forEach((e) => {
-          if (e.media_key == tweet.attachments.media_keys[0]) {
+          if (e.media_key === tweet.attachments.media_keys[0]) {
             array.push({
               id: tweet.id,
               profile_pic: tweetUserInfo.profile_image_url,

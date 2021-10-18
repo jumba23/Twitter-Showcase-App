@@ -10,11 +10,12 @@ const TweetCardV1 = ({ tweetData_v1 }) => {
             <img
               id="user-profile-img"
               src={tweet.profile_pic}
-              alt="Twitter user's profile image"
+              alt="Twitter user's profile"
             />
             <div id="user-name">{tweet.name}</div>
             <a
               href={`https://twitter.com/${tweet.userName}`}
+              rel="noreferrer"
               id="screen-name"
               target="_blank"
             >
@@ -22,9 +23,9 @@ const TweetCardV1 = ({ tweetData_v1 }) => {
             </a>
           </div>
           <div id="tweet-text">{tweet.text} </div>
-          {tweet.pic_url != "" ? (
+          {tweet.pic_url !== "" ? (
             <div id="tweet-media">
-              <img src={tweet.pic_url} />
+              <img src={tweet.pic_url} alt="" />
             </div>
           ) : null}
           <div id="tweet-metrics">
