@@ -7,7 +7,7 @@
     "build": "npm run build",
     "server": "nodemon server.js",
     "client": "npm run watch --prefix ../client",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
