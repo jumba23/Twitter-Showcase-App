@@ -2,6 +2,6 @@
     "name": "app",
     "version": "0.1.0",
     "scripts": {
-        "start": "npm install --prefix server && npm start --prefix server",
+        "start": "npm install --prefix server && npm start --prefix server"
        }
   }
