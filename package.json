@@ -2,7 +2,7 @@
     "name": "app",
     "version": "0.1.0",
     "scripts": {
-        "start": "npm start --prefix server",
+        "start": "npm install --prefix server && npm start --prefix server",
         "heroku-prebuild": "npm install --prefix client && npm run build --prefix client"
     }
   }
