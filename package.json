@@ -2,6 +2,6 @@
     "name": "app",
     "version": "0.1.0",
     "scripts": {
-      "postinstall": "npm install --prefix ./server && npm install --prefix ./client"
+        "heroku-prebuild": "npm install && npm i --prefix client && npm run build --prefix client",
     }
   }
