@@ -4,8 +4,6 @@ import moment from "moment";
 import TweetCardV2 from "../TweetCards/TweetCardV2";
 import FavoriteNav from "../FavoriteNav/FavoriteNav";
 
-const api = axios.create({ baseURL: "http://localhost:4000/favorites" });
-
 const FavoritesPage = () => {
   const [tweetData, settweetData] = useState([]);
   const [tweetIncludesMediaArray, setTweetIncludesMediaArray] = useState([]);
@@ -24,8 +22,8 @@ const FavoritesPage = () => {
   }, [tweetIncludesMediaArray, tweetUserInfo]);
 
   const gettweetData = async () => {
-    await api
-      .get("/", { params: { userId: userId } })
+    await axios
+      .get("/favorites", { params: { userId: userId } })
       .then((response) => {
         settweetData(response.data.data);
         setTweetIncludesMediaArray(response.data.includes.media);

@@ -614,9 +614,6 @@ var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - T
 
 
 
-const api = axios__WEBPACK_IMPORTED_MODULE_1___default.a.create({
-  baseURL: "http://localhost:4000/favorites"
-});
 
 const FavoritesPage = () => {
   const [tweetData, settweetData] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
@@ -634,7 +631,7 @@ const FavoritesPage = () => {
   }, [tweetIncludesMediaArray, tweetUserInfo]);
 
   const gettweetData = async () => {
-    await api.get("/", {
+    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/favorites", {
       params: {
         userId: userId
       }
@@ -681,18 +678,18 @@ const FavoritesPage = () => {
       onSelection: handleEvent
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 66,
       columnNumber: 7
     }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(_TweetCards_TweetCardV2__WEBPACK_IMPORTED_MODULE_3__["default"], {
       tweetData_v2: finalData
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 67,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 67,
+    lineNumber: 65,
     columnNumber: 5
   }, undefined);
 };
@@ -793,9 +790,6 @@ var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - T
 
 
 
-const api = axios__WEBPACK_IMPORTED_MODULE_1___default.a.create({
-  baseURL: "http://localhost:4000/search"
-});
 
 const SearchPage = () => {
   const [searchParam, setSearchParam] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
@@ -813,7 +807,7 @@ const SearchPage = () => {
   }, [tweetData]);
 
   const gettweetData = async () => {
-    await api.get("/", {
+    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/search", {
       params: {
         searchParam
       }
@@ -859,25 +853,25 @@ const SearchPage = () => {
       handleSubmit: handleSubmit
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 66,
       columnNumber: 7
     }, undefined), error !== "" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
       id: "error",
       children: "Please check the screen name you entered and try again"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 68,
       columnNumber: 9
     }, undefined) : null, /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(_TweetCards_TweetCardV1__WEBPACK_IMPORTED_MODULE_3__["default"], {
       tweetData_v1: finalData
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 72,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 67,
+    lineNumber: 65,
     columnNumber: 5
   }, undefined);
 };

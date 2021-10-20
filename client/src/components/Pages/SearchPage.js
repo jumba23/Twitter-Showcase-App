@@ -4,8 +4,6 @@ import moment from "moment";
 import TweetCardV1 from "../TweetCards/TweetCardV1";
 import SearchForm from "../SearchForm/SearchForm.js";
 
-const api = axios.create({ baseURL: "http://localhost:4000/search" });
-
 const SearchPage = () => {
   const [searchParam, setSearchParam] = useState("");
   const [tweetData, settweetData] = useState([]);
@@ -24,8 +22,8 @@ const SearchPage = () => {
   }, [tweetData]);
 
   const gettweetData = async () => {
-    await api
-      .get("/", { params: { searchParam } })
+    await axios
+      .get("/search", { params: { searchParam } })
       .then((response) => {
         settweetData(response.data);
       })
