@@ -21,8 +21,3 @@
 #author, #text {
     animation: text 8s;
 }
-
-#text {
-    justify-content: flex-end;
-    align-self:flex-end;
-}

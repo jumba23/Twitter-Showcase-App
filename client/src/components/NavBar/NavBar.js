@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
-import './NavBar.css'
 
 const NavBar = () => {
   return (
-    <nav id="nav-bar-container">
+    <div id="nav-bar-container">
       <NavLink
         to="/"
         exact
@@ -23,7 +22,7 @@ const NavBar = () => {
       >
         Favorites
       </NavLink>
-    </nav>
+    </div>
   );
 };
 export default NavBar;

@@ -1,19 +1,41 @@
 #container {
-  width: 100vw;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  background-image: url("./Images/lake-house.jpg");
-  background-size: cover;
-  align-items: center;
+  left: 10vw;
+  margin: 0 auto;
+}
+
+#nav-bar-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 10vh;
+  margin: 0 auto;
+}
+
+.nav-selection {
+  height: 8vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.selected {
+  border-bottom: 3px solid rgb(255, 252, 252);
+  color: black;
 }
 
 #page-content {
   width: 80vw;
   height: 80vh;
   background-color: rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 10vh;
-  left: 10vw;
+  position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
@@ -51,4 +73,69 @@ p {
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
   align-self: center;
+}
+
+@media (max-width: 1148px) {
+  #nav-bar-container {
+    display: flex;
+    justify-content: start;
+    height: 10vh;
+    margin: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-selection {
+    padding: 0.7rem 0.5rem 0.1rem 0.5rem;
+    height: 3rem;
+  }
+  #nav-bar-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 8vh;
+  }
+  form {
+    position: fixed;
+    top: 4rem;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+  }
+  #page-content {
+    width: 96vw;
+    height: 88vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    align-items: center;
+  }
+  h2,
+  h5 {
+    padding: 1rem 2rem;
+  }
+  p {
+    font-size: 1rem;
+    padding: 0rem 1rem;
+  }
+
+  #quote {
+    font-family: "Kalam", cursive;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    padding-right: 0vw;
+    color: rgb(231, 224, 159);
+  }
+  #container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 2vw;
+    margin: 0 auto;
+  }
 }

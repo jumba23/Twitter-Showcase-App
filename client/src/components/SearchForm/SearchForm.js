@@ -12,20 +12,18 @@ const SearchForm = (props) => {
   };
 
   return (
-    <div id="search-form">
-      <form onSubmit={submitHandler}>
-        <input
-          type="text"
-          id="search-param"
-          placeholder=" Search by @user or keyword..."
-          autoFocus
-          required
-        />
-        <button id="search-button" type="submit">
-          <Search />
-        </button>
-      </form>
-    </div>
+    <form onSubmit={submitHandler}>
+      <input
+        type="text"
+        id="search-param"
+        placeholder=" Search by @user or keyword..."
+        autoFocus
+        required
+      />
+      <button id="search-button" type="submit">
+        <Search />
+      </button>
+    </form>
   );
 };
 

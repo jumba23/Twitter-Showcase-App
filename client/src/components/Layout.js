@@ -4,7 +4,7 @@ import "./Layout.css";
 const Layout = ({ children }) => {
   return (
     <div id="container">
-      <NavBar />
+      <NavBar  />
       <div id="page-content">{children}</div>
     </div>
   );
