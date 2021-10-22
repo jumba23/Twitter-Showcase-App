@@ -6,6 +6,7 @@
     "runtime-main.js.map": "/js/bundle.js.map",
     "vendors~main.js": "/js/vendors~main.chunk.js",
     "vendors~main.js.map": "/js/vendors~main.chunk.js.map",
+    "index.html": "/index.html",
     "media/lake-house.jpg": "/media/lake-house.e4e24851.jpg"
   },
   "entrypoints": [
