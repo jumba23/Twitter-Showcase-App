@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_components_Images_lake_house_jpg__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "*, *::before, *::after {box-sizing: border-box}\n\n.App{\n  text-align: center;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  position: relative;\n  width: 100vw;\n  height: 100vh;\n  }\n  ", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,wBAAwB,sBAAsB;;AAE9C;EACE,kBAAkB;EAClB,yDAA2D;EAC3D,sBAAsB;EACtB,2BAA2B;EAC3B,4BAA4B;EAC5B,kBAAkB;EAClB,YAAY;EACZ,aAAa;EACb","sourcesContent":["*, *::before, *::after {box-sizing: border-box}\n\n.App{\n  text-align: center;\n  background-image: url(\"./components/Images/lake-house.jpg\");\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  position: relative;\n  width: 100vw;\n  height: 100vh;\n  }\n  "],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* *, *::before, *::after {box-sizing: border-box} */\n\n.App{\n  text-align: center;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  width: 100vw;\n  height: 100vh;\n  }\n  ", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,oDAAoD;;AAEpD;EACE,kBAAkB;EAClB,yDAA2D;EAC3D,sBAAsB;EACtB,2BAA2B;EAC3B,4BAA4B;EAC5B,YAAY;EACZ,aAAa;EACb","sourcesContent":["/* *, *::before, *::after {box-sizing: border-box} */\n\n.App{\n  text-align: center;\n  background-image: url(\"./components/Images/lake-house.jpg\");\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  width: 100vw;\n  height: 100vh;\n  }\n  "],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -1049,7 +1049,6 @@ const SearchForm = props => {
       type: "text",
       id: "search-param",
       placeholder: " Search by @user or keyword...",
-      autoFocus: true,
       required: true
     }, void 0, false, {
       fileName: _jsxFileName,
@@ -1060,12 +1059,12 @@ const SearchForm = props => {
       type: "submit",
       children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaSearch"], {}, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 23,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 22,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {

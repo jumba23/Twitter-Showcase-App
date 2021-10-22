@@ -17,7 +17,6 @@ const SearchForm = (props) => {
         type="text"
         id="search-param"
         placeholder=" Search by @user or keyword..."
-        autoFocus
         required
       />
       <button id="search-button" type="submit">
