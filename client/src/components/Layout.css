@@ -16,7 +16,7 @@
 }
 
 .nav-selection {
-  height: 8vh;
+  height: 3rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   align-items: center;
-}
+ }
 
 #page-content::-webkit-scrollbar {
   display: none;
@@ -96,20 +96,15 @@ p {
   }
   form {
     position: fixed;
-    top: 4rem;
+    top: 7.6%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -7.6%);
+    padding-block: 0.5rem;
   }
   #page-content {
     width: 96vw;
     height: 88vh;
-    background-color: rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scroll-snap-type: y mandatory;
-    align-items: center;
   }
 
   h2,
@@ -123,7 +118,6 @@ p {
   }
 
   #quote {
-    font-family: "Kalam", cursive;
     font-size: 1.1rem;
     display: flex;
     flex-direction: column;
@@ -131,7 +125,6 @@ p {
     left: 50%;
     transform: translate(-50%, -70%);
     padding-right: 0vw;
-    color: rgb(231, 224, 159);
   }
 
   #container {
@@ -140,5 +133,22 @@ p {
     position: absolute;
     left: 2vw;
     margin: 0 auto;
+  }
+}
+
+
+@media (min-height: 840px) {
+  form {
+    top: 4vh;
+  }
+}
+
+@media (max-height: 700px) {
+  #nav-bar-container {
+    height: 12vh;
+    margin: 0 auto;
+  }
+  .nav-selection {
+   padding: 1rem 2rem;
   }
 }

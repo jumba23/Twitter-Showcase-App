@@ -1,8 +1,8 @@
-import "./TweetCardV2.css";
+import "./TweetCard.css";
 
 const TweetCardV2 = ({ tweetData_v2 }) => {
   return (
-    <div id="body">
+    <div id="tweet-list-favs">
       {tweetData_v2.map((tweet) => (
         <div id="tweet-card" key={tweet.id}>
           <div id="user-info">

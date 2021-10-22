@@ -1,9 +1,9 @@
 import { FaRetweet as Retweet, FaHeart as Like } from "react-icons/fa";
-import "./TweetCardV1.css";
+import "./TweetCard.css";
 
 const TweetCardV1 = ({ tweetData_v1 }) => {
   return (
-    <div id="body">
+    <div id="tweet-list-search">
       {tweetData_v1.map((tweet) => (
         <div id="tweet-card" key={tweet.id}>
           <div id="user-info">
