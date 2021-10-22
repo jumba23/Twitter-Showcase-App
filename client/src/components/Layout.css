@@ -111,10 +111,12 @@ p {
     scroll-snap-type: y mandatory;
     align-items: center;
   }
+
   h2,
   h5 {
     padding: 1rem 2rem;
   }
+
   p {
     font-size: 1rem;
     padding: 0rem 1rem;
@@ -131,10 +133,11 @@ p {
     padding-right: 0vw;
     color: rgb(231, 224, 159);
   }
+
   #container {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     left: 2vw;
     margin: 0 auto;
   }
