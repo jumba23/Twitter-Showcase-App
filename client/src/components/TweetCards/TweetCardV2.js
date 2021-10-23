@@ -22,7 +22,7 @@ const TweetCardV2 = ({ tweetData_v2 }) => {
             </a>
           </div>
           <div id="tweet-text">{tweet.text}</div>
-          <div id="tweet-media">
+          <div id="tweet-media-v2">
             {tweet.mediaType === "photo" ? (
               <img src={tweet.pic_url} alt="" />
             ) : (

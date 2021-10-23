@@ -24,7 +24,7 @@ const TweetCardV1 = ({ tweetData_v1 }) => {
           </div>
           <div id="tweet-text">{tweet.text} </div>
           {tweet.pic_url !== "" ? (
-            <div id="tweet-media">
+            <div id="tweet-media-v1">
               <img src={tweet.pic_url} alt="" />
             </div>
           ) : null}

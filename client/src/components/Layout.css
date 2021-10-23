@@ -40,7 +40,7 @@
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   align-items: center;
- }
+}
 
 #page-content::-webkit-scrollbar {
   display: none;
@@ -77,9 +77,7 @@ p {
 
 @media (max-width: 1148px) {
   #nav-bar-container {
-    display: flex;
     justify-content: start;
-    height: 10vh;
     margin: 0;
   }
 }
@@ -87,12 +85,11 @@ p {
 @media (max-width: 800px) {
   .nav-selection {
     padding: 0.7rem 0.5rem 0.1rem 0.5rem;
-    height: 3rem;
+    height: 2.7rem;
   }
   #nav-bar-container {
-    display: flex;
     justify-content: space-evenly;
-    height: 8vh;
+    height: 6vh;
   }
   form {
     display: flex;
@@ -102,14 +99,10 @@ p {
     position: sticky;
     top: 0;
     opacity: 0.7;
-    /* position: fixed;
-    top: 7.6%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -7.6%);
-    padding-block: 0.5rem; */
   }
+
   #page-content {
+    margin-top: 0;
     width: 96vw;
     height: 88vh;
   }
@@ -135,28 +128,90 @@ p {
   }
 
   #container {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     left: 2vw;
-    margin: 0 auto;
+  }
+
+  #tweet-media-v2 {
+    width: 50vw;
+    height: 40vh;
+    max-height: 30vh;
+  }
+  #tweet-media-v1 {
+    width: 50vw;
+    max-height: 30vh;
   }
 }
 
-
-/* @media (min-height: 840px) {
+@media (min-height: 900px) {
   form {
     top: 4vh;
   }
-} */
+}
 
 @media (max-height: 700px) {
   #nav-bar-container {
     height: 12vh;
-    margin: 0 auto;
   }
   .nav-selection {
-   padding: 1rem 2rem;
+    padding: 1rem 2rem;
+  }
+}
 
+@media screen and (orientation: landscape) and (max-width: 840px) {
+  .nav-selection {
+    padding: 0rem 2rem 0.1rem 2rem;
+    height: 2rem;
+  }
+  #nav-bar-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 8vh;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    padding-top: 0rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    opacity: 0.7;
+  }
+
+  #page-content {
+    margin-top: 0.5rem;
+    width: 96vw;
+    height: 78vh;
+  }
+
+  h2,
+  h5 {
+    padding: 0.5rem 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0rem 1rem;
+  }
+
+  #quote {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    padding-right: 0vw;
+  }
+
+  #container {
+    left: 2vw;
+  }
+  #tweet-card {
+    width: 95vw;
+    max-height: 90vh;
+    padding: 0.4rem;
+    overflow: auto;
+    margin: 0.2rem auto;
   }
 }
