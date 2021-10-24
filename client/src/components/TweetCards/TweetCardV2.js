@@ -1,6 +1,14 @@
+import { useState } from "react";
 import "./TweetCard.css";
 
 const TweetCardV2 = ({ tweetData_v2 }) => {
+  const [selectImgId, serSelectedImgId] = useState("");
+
+  const handleEvent = (e) => {
+    console.log(e.target.src);
+    serSelectedImgId(e.target.src);
+  };
+
   return (
     <div id="tweet-list-favs">
       {tweetData_v2.map((tweet) => (
@@ -24,9 +32,23 @@ const TweetCardV2 = ({ tweetData_v2 }) => {
           <div id="tweet-text">{tweet.text}</div>
           <div id="tweet-media-v2">
             {tweet.mediaType === "photo" ? (
-              <img src={tweet.pic_url} alt="" />
+              <>
+                <a href="#large-image" onClick={handleEvent}>
+                  <img src={tweet.pic_url} alt="small" />
+                </a>
+                <a href="" className="overlay" id="large-image">
+                  <img src={selectImgId} alt="large" />
+                </a>
+              </>
             ) : (
-              <img src={tweet.vid_url} alt="" />
+              <>
+                <a href="#large-image" onClick={handleEvent}>
+                  <img src={tweet.vid_url} alt="small" />
+                </a>
+                <a href="" className="overlay" id="large-image">
+                  <img src={selectImgId} alt="large" />
+                </a>
+              </>
             )}
           </div>
           <div id="tweet-date">Date: {tweet.created_date} </div>
