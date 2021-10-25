@@ -34,7 +34,7 @@ const TweetCardV2 = ({ tweetData_v2 }) => {
               <a href="#photo1" onClick={handleEvent}>
                 <img src={tweet.pic_url} alt="small" id="small-img" />
               </a>
-              <a href="" className="overlay" id="photo1">
+              <a href="#" className="overlay" id="photo1">
                 <img src={selectImgId} alt="large" id="large-img" />
               </a>
             </div>
@@ -43,7 +43,7 @@ const TweetCardV2 = ({ tweetData_v2 }) => {
               <a href="#photo1" onClick={handleEvent}>
                 <img src={tweet.vid_url} alt="small" id="small-img" />
               </a>
-              <a href="" className="overlay" id="large-image">
+              <a href="#" className="overlay" id="large-image">
                 <img src={selectImgId} alt="large" id="large-img" />
               </a>
             </div>

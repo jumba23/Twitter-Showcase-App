@@ -557,7 +557,7 @@ const FavoritesPage = () => {
   }, [tweetIncludesMediaArray, tweetUserInfo]);
 
   const gettweetData = async () => {
-    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/favorites", {
+    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/favorites", {
       params: {
         userId: userId
       }
@@ -733,11 +733,12 @@ const SearchPage = () => {
   }, [tweetData]);
 
   const gettweetData = async () => {
-    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/search", {
+    await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/search", {
       params: {
         searchParam
       }
     }).then(response => {
+      console.log(response);
       settweetData(response.data);
     }).catch(error => {
       if (error.response.status) {
@@ -779,25 +780,25 @@ const SearchPage = () => {
       handleSubmit: handleSubmit
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 67,
       columnNumber: 7
     }, undefined), error !== "" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
       id: "error",
       children: "Please check the screen name you entered and try again"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 69,
       columnNumber: 9
     }, undefined) : null, /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(_TweetCards_TweetCardV1__WEBPACK_IMPORTED_MODULE_3__["default"], {
       tweetData_v1: finalData
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 73,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 65,
+    lineNumber: 66,
     columnNumber: 5
   }, undefined);
 };
@@ -1180,7 +1181,7 @@ const TweetCardV1 = ({
           lineNumber: 34,
           columnNumber: 15
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("a", {
-          href: "",
+          href: "#",
           className: "overlay",
           id: "photo1",
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("img", {
@@ -1345,7 +1346,7 @@ const TweetCardV2 = ({
           lineNumber: 34,
           columnNumber: 15
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("a", {
-          href: "",
+          href: "#",
           className: "overlay",
           id: "photo1",
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {
@@ -1385,7 +1386,7 @@ const TweetCardV2 = ({
           lineNumber: 43,
           columnNumber: 15
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("a", {
-          href: "",
+          href: "#",
           className: "overlay",
           id: "large-image",
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("img", {

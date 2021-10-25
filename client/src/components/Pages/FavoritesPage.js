@@ -23,7 +23,7 @@ const FavoritesPage = () => {
 
   const gettweetData = async () => {
     await axios
-      .get("/favorites", { params: { userId: userId } })
+      .get("/api/favorites", { params: { userId: userId } })
       .then((response) => {
         settweetData(response.data.data);
         setTweetIncludesMediaArray(response.data.includes.media);

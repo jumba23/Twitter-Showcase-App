@@ -6,10 +6,12 @@ const favoritesRouter = require("./routes/favoritesRouter");
 const searchRouter = require("./routes/searchRouter");
 const port = process.env.PORT || 4000;
 
-app.use("/favorites", favoritesRouter);
-app.use("/search", searchRouter);
+app.use("/api", favoritesRouter);
+app.use("/api", searchRouter);
 
 app.use(express.static(path.join(__dirname, "../client/build")));
+
+// app.get("/favorites, ()")
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));

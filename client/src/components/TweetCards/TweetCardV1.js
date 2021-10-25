@@ -34,7 +34,7 @@ const TweetCardV1 = ({ tweetData_v1 }) => {
               <a href="#photo1" onClick={handleEvent}>
                 <img src={tweet.pic_url} alt="small" id="small-img" />
               </a>
-              <a href="" className="overlay" id="photo1">
+              <a href="#" className="overlay" id="photo1">
                 <img src={selectImgId} alt="large" id="large-img" />
               </a>
             </div>

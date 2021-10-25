@@ -23,8 +23,9 @@ const SearchPage = () => {
 
   const gettweetData = async () => {
     await axios
-      .get("/search", { params: { searchParam } })
+      .get("/api/search", { params: { searchParam } })
       .then((response) => {
+        console.log(response)
         settweetData(response.data);
       })
       .catch((error) => {
