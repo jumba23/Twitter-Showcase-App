@@ -132,12 +132,12 @@ p {
     left: 2vw;
   }
 
-  #tweet-media-v2 {
+  #tweet-media-v2 img#small-img {
     width: 50vw;
     height: 40vh;
     max-height: 30vh;
   }
-  #tweet-media-v1 {
+  #tweet-media-v1 img#small-img {
     width: 50vw;
     max-height: 30vh;
   }
@@ -214,7 +214,7 @@ p {
     overflow: auto;
     margin: 0.2rem auto;
   }
-  .overlay img {
+  .overlay img#large-img {
     max-width: 100%;
     margin: 0 auto;
     height: 100%;

@@ -5,7 +5,6 @@ const TweetCardV2 = ({ tweetData_v2 }) => {
   const [selectImgId, serSelectedImgId] = useState("");
 
   const handleEvent = (e) => {
-    console.log(e.target.src);
     serSelectedImgId(e.target.src);
   };
 
@@ -30,27 +29,25 @@ const TweetCardV2 = ({ tweetData_v2 }) => {
             </a>
           </div>
           <div id="tweet-text">{tweet.text}</div>
-          <div id="tweet-media-v2">
-            {tweet.mediaType === "photo" ? (
-              <>
-                <a href="#large-image" onClick={handleEvent}>
-                  <img src={tweet.pic_url} alt="small" />
-                </a>
-                <a href="" className="overlay" id="large-image">
-                  <img src={selectImgId} alt="large" />
-                </a>
-              </>
-            ) : (
-              <>
-                <a href="#large-image" onClick={handleEvent}>
-                  <img src={tweet.vid_url} alt="small" />
-                </a>
-                <a href="" className="overlay" id="large-image">
-                  <img src={selectImgId} alt="large" />
-                </a>
-              </>
-            )}
-          </div>
+          {tweet.mediaType === "photo" ? (
+            <div id="tweet-media-v2">
+              <a href="#photo1" onClick={handleEvent}>
+                <img src={tweet.pic_url} alt="small" id="small-img" />
+              </a>
+              <a href="" className="overlay" id="photo1">
+                <img src={selectImgId} alt="large" id="large-img" />
+              </a>
+            </div>
+          ) : (
+            <div id="tweet-media-v2">
+              <a href="#photo1" onClick={handleEvent}>
+                <img src={tweet.vid_url} alt="small" id="small-img" />
+              </a>
+              <a href="" className="overlay" id="large-image">
+                <img src={selectImgId} alt="large" id="large-img" />
+              </a>
+            </div>
+          )}
           <div id="tweet-date">Date: {tweet.created_date} </div>
         </div>
       ))}

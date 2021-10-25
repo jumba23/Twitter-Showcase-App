@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { FaRetweet as Retweet, FaHeart as Like } from "react-icons/fa";
 import "./TweetCard.css";
 
 const TweetCardV1 = ({ tweetData_v1 }) => {
+  const [selectImgId, serSelectedImgId] = useState("");
+
+  const handleEvent = (e) => {
+    serSelectedImgId(e.target.src);
+  };
   return (
     <div id="tweet-list-search">
       {tweetData_v1.map((tweet) => (
@@ -25,7 +31,12 @@ const TweetCardV1 = ({ tweetData_v1 }) => {
           <div id="tweet-text">{tweet.text} </div>
           {tweet.pic_url !== "" ? (
             <div id="tweet-media-v1">
-              <img src={tweet.pic_url} alt="" />
+              <a href="#photo1" onClick={handleEvent}>
+                <img src={tweet.pic_url} alt="small" id="small-img" />
+              </a>
+              <a href="" className="overlay" id="photo1">
+                <img src={selectImgId} alt="large" id="large-img" />
+              </a>
             </div>
           ) : null}
           <div id="tweet-metrics">
