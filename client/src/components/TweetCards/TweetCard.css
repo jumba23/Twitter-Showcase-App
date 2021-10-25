@@ -188,11 +188,11 @@
   #tweet-media-v1 img#small-img {
     display: flex;
     justify-content: center;
-    width: 15rem;
-    height: 12rem;
+    width: 70vw;
+    height: 40vh;
     margin: 0 auto;
     object-fit: contain;
-    padding-block: 0.3rem;
+    padding-block: 0.1rem;
   }
   #tweet-media-v2 img#small-img {
     display: flex;

@@ -133,13 +133,13 @@ p {
   }
 
   #tweet-media-v2 img#small-img {
-    width: 50vw;
-    height: 40vh;
-    max-height: 30vh;
+    width: 80vw;
+    height: auto;
   }
+
   #tweet-media-v1 img#small-img {
-    width: 50vw;
-    max-height: 30vh;
+    width: 80vw;
+    height: auto;
   }
 }
 
@@ -207,6 +207,7 @@ p {
   #container {
     left: 2vw;
   }
+
   #tweet-card {
     width: 95vw;
     max-height: 90vh;
@@ -214,6 +215,7 @@ p {
     overflow: auto;
     margin: 0.2rem auto;
   }
+  
   .overlay img#large-img {
     max-width: 100%;
     margin: 0 auto;

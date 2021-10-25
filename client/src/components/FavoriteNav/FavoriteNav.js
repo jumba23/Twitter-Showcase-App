@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import "./FavoriteNav.css";
 
-const SideNav = (props) => {
+const SideNav = ({onSelection}) => {
   const [newUserId, setNewUserId] = useState("");
 
   useEffect(() => {
-    props.onSelection(newUserId);
+    onSelection(newUserId);
   }, [newUserId]);
 
   const handleEvent = (e) => {

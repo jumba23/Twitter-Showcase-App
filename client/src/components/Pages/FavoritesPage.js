@@ -7,9 +7,9 @@ import FavoriteNav from "../FavoriteNav/FavoriteNav";
 const FavoritesPage = () => {
   const [tweetData, settweetData] = useState([]);
   const [tweetIncludesMediaArray, setTweetIncludesMediaArray] = useState([]);
-  const [finalData, setFinalData] = useState([]);
   const [tweetUserInfo, setTweetUserInfo] = useState({});
   const [userId, setUserId] = useState("");
+  const [finalData, setFinalData] = useState([]);
 
   useEffect(() => {
     if (userId !== "") {
