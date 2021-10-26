@@ -17,3 +17,7 @@ form {
   width: 2rem;
   border: none;
 }
+
+input:focus::placeholder {
+  color: transparent;
+}

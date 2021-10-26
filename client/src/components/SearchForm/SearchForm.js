@@ -17,6 +17,7 @@ const SearchForm = (props) => {
         type="text"
         id="search-param"
         placeholder=" Search by @user or keyword..."
+        autoComplete="off"
         required
       />
       <button id="search-button" type="submit">

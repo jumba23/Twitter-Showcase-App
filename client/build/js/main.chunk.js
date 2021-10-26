@@ -109,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "form {\r\n  position: fixed;\r\n  top: 5vh;\r\n  right: 10vw;\r\n }\r\n\r\n#search-param {\r\n  width: 15rem;\r\n  color: black;\r\n  border: none;\r\n  opacity: 0.6;\r\n  padding:0rem;\r\n}\r\n\r\n#search-button {\r\n  background-color: rgb(103, 103, 156);\r\n  width: 2rem;\r\n  border: none;\r\n}\r\n", "",{"version":3,"sources":["webpack://src/components/SearchForm/SearchForm.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,QAAQ;EACR,WAAW;CACZ;;AAED;EACE,YAAY;EACZ,YAAY;EACZ,YAAY;EACZ,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,oCAAoC;EACpC,WAAW;EACX,YAAY;AACd","sourcesContent":["form {\r\n  position: fixed;\r\n  top: 5vh;\r\n  right: 10vw;\r\n }\r\n\r\n#search-param {\r\n  width: 15rem;\r\n  color: black;\r\n  border: none;\r\n  opacity: 0.6;\r\n  padding:0rem;\r\n}\r\n\r\n#search-button {\r\n  background-color: rgb(103, 103, 156);\r\n  width: 2rem;\r\n  border: none;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "form {\r\n  position: fixed;\r\n  top: 5vh;\r\n  right: 10vw;\r\n }\r\n\r\n#search-param {\r\n  width: 15rem;\r\n  color: black;\r\n  border: none;\r\n  opacity: 0.6;\r\n  padding:0rem;\r\n}\r\n\r\n#search-button {\r\n  background-color: rgb(103, 103, 156);\r\n  width: 2rem;\r\n  border: none;\r\n}\r\n\r\ninput:focus::placeholder {\r\n  color: transparent;\r\n}\r\n", "",{"version":3,"sources":["webpack://src/components/SearchForm/SearchForm.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,QAAQ;EACR,WAAW;CACZ;;AAED;EACE,YAAY;EACZ,YAAY;EACZ,YAAY;EACZ,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,oCAAoC;EACpC,WAAW;EACX,YAAY;AACd;;AAEA;EACE,kBAAkB;AACpB","sourcesContent":["form {\r\n  position: fixed;\r\n  top: 5vh;\r\n  right: 10vw;\r\n }\r\n\r\n#search-param {\r\n  width: 15rem;\r\n  color: black;\r\n  border: none;\r\n  opacity: 0.6;\r\n  padding:0rem;\r\n}\r\n\r\n#search-button {\r\n  background-color: rgb(103, 103, 156);\r\n  width: 2rem;\r\n  border: none;\r\n}\r\n\r\ninput:focus::placeholder {\r\n  color: transparent;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -1030,6 +1030,7 @@ const SearchForm = props => {
       type: "text",
       id: "search-param",
       placeholder: " Search by @user or keyword...",
+      autoComplete: "off",
       required: true
     }, void 0, false, {
       fileName: _jsxFileName,
@@ -1040,12 +1041,12 @@ const SearchForm = props => {
       type: "submit",
       children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaSearch"], {}, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
