@@ -1,1 +1,0 @@
-Twitter Travel App - Express and React project
