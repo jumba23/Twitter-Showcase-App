@@ -17,8 +17,8 @@ There are three pages to this site: Home, Search, and Favorites.
 # Tools and Technologies 
 
 
-  ## Client-side (Front-End)
-  
+**Client-side (Front-End)**
+
 The front-end of this project is built in React using create-react-app application. The entire site contains of a single page layout that changes content based on the current endpoint, for which I am using Axios. CSS styling and transitions are used to improve the user experience and also to make the site mobile responsive (including landscape layout). 
 
 External resources and packages imported for this project are listed below.
@@ -28,7 +28,7 @@ External resources and packages imported for this project are listed below.
    - Date and time: https://www.npmjs.com/package/moment/
    - Mobile menu icon: https://react-icons.github.io/react-icons/
 
-  ## Server-side (Back-End)
+**Server-side (Back-End)**
 
 The back-end for this site is created using Express.js. There are two routes defined for the backend: search and favorites. At this time I was using two different types of 
 Twitter API searches available for the purose of working with two different data loads and parsing them.
@@ -46,13 +46,13 @@ Additional Resources:
 # Running Locally
 The below instructions can be followed if you want to run this project locally for custom development or enhancements:
 
-  ## Setup locally
+**Setup locally**
 
   - Fork this repository to your Github account
   - On your local computer, navigate to the folder you want to store the project: cd PROJECT-FOLDER-NAME
   - Clone the forked repository locally: git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
-  ## Start Server
+**Start Server**
 
    - Navigate to project folder: cd PROJECT-FOLDER-NAME/twitter-showcase
    - Install dependencies: npm install
@@ -63,7 +63,7 @@ The below instructions can be followed if you want to run this project locally f
           - if you don't have a bearer token, you can create an account [HERE](https://developer.twitter.com/en/apply-for-access) and use your account to generate bearer tokens. Instructions on how to create bearer tokens can be found [HERE](https://developer.twitter.com/ja/docs/basics/authentication/guides/access-tokens).
           - if you already have a Twitter account and don't have your bearer token saved, you can generate a new one, but you will need to update any existing application with the new token value
 
-  ## Start Client
+**Start Client**
 
   - Open a new terminal window
   - Navigate to the client folder: cd PROJECT-FOLDER-NAME/twitter-showcase/client
