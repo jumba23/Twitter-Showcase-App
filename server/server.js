@@ -11,8 +11,6 @@ app.use("/api", searchRouter);
 
 app.use(express.static(path.join(__dirname, "../client/build")));
 
-// app.get("/favorites, ()")
-
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
