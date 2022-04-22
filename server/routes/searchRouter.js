@@ -1,4 +1,5 @@
 require("dotenv").config();
+const moment = require("moment");
 const express = require("express");
 const searchRouter = express.Router();
 const axios = require("axios");
@@ -18,9 +19,25 @@ searchRouter.get("/search", (req, res) => {
     .get(`${SEARCH_URL}${SEARCH_PARAMETERS}${userQuery}`, token)
     .then(async (response) => {
       const tweetData = await response.data;
-      res.send(tweetData);
+
+      const newTweetData = tweetData.map((tweet) => {
+        return {
+          id: tweet.id,
+          profile_pic: tweet.user.profile_image_url_https,
+          name: tweet.user.name,
+          userName: tweet.user.screen_name,
+          text: tweet.full_text,
+          likes: tweet.favorite_count,
+          retweet: tweet.retweet_count,
+          created_date: moment(tweet.created_at).calendar(),
+          pic_url: tweet.entities.media
+            ? tweet.entities.media[0].media_url_https
+            : "",
+        };
+      });
+      res.send(newTweetData);
     })
-    .catch(error => {
+    .catch((error) => {
       res.status(error.response.status).send({
         error: error.response.statusText,
       });

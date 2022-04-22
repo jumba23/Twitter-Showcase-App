@@ -1,32 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
-import moment from "moment";
 import TweetCardV1 from "../TweetCards/TweetCardV1";
 import SearchForm from "../SearchForm/SearchForm.js";
 
 const SearchPage = () => {
-  const [searchParam, setSearchParam] = useState("");
-  const [tweetData, settweetData] = useState([]);
-  const [finalData, setFinalData] = useState([]);
+  const [tweetData, setTweetData] = useState([]);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    if (searchParam) {
-      gettweetData();
-      setError("");
-    }
-  }, [searchParam]);
-
-  useEffect(() => {
-    filterData();
-  }, [tweetData]);
-
-  const gettweetData = async () => {
+  const getTweetData = async (searchParam) => {
     await axios
-      .get("/api/search", { params: { searchParam } })
+      .get("/api/search", { params: { searchParam: searchParam } })
       .then((response) => {
-        console.log(response)
-        settweetData(response.data);
+        console.log(response.data)
+        setTweetData(response.data.data);
       })
       .catch((error) => {
         if (error.response.status) {
@@ -35,31 +21,11 @@ const SearchPage = () => {
       });
   };
 
-  const filterData = () => {
-    let array = [];
-    if (!error) {
-      tweetData.forEach((tweet) => {
-        array.push({
-          id: tweet.id,
-          profile_pic: tweet.user.profile_image_url_https,
-          name: tweet.user.name,
-          userName: tweet.user.screen_name,
-          text: tweet.full_text,
-          likes: tweet.favorite_count,
-          retweet: tweet.retweet_count,
-          created_date: moment(tweet.created_at).calendar(),
-          pic_url: tweet.entities.media
-            ? tweet.entities.media[0].media_url_https
-            : "",
-        });
-      });
-    }
-    setFinalData(array);
-  };
-
   const handleSubmit = (newSearchParam) => {
-    setSearchParam(newSearchParam);
-    setFinalData([]);
+    if (newSearchParam) {
+      getTweetData(newSearchParam);
+      setError("");
+    }
   };
 
   return (
@@ -70,7 +36,7 @@ const SearchPage = () => {
           Please check the screen name you entered and try again
         </div>
       ) : null}
-      <TweetCardV1 tweetData_v1={finalData} />
+      <TweetCardV1 tweetData_v1={tweetData} />
     </div>
   );
 };

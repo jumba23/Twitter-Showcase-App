@@ -1,24 +1,29 @@
+import { useState } from "react";
 import { FaSearch as Search } from "react-icons/fa";
 import "./SearchForm.css";
 
 const SearchForm = (props) => {
-  const submitHandler = (e) => {
+  const [searchParam, setSearchParam] = useState("");
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const searchParam = document.getElementById("search-param").value;
-    if (searchParam) {
+    if (searchParam !== "") {
       props.handleSubmit(searchParam);
-      document.getElementById("search-param").value = "";
     }
   };
 
+  const handleChange = (e) => setSearchParam(e.target.value);
+
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         id="search-param"
         placeholder=" Search by @user or keyword..."
         autoComplete="off"
         required
+        onChange={handleChange}
+        value={searchParam}
       />
       <button id="search-button" type="submit">
         <Search />
