@@ -3,6 +3,7 @@ const moment = require("moment");
 const express = require("express");
 const searchRouter = express.Router();
 const axios = require("axios");
+const { now } = require("moment");
 
 const token = {
   headers: {
@@ -29,7 +30,10 @@ searchRouter.get("/search", (req, res) => {
           text: tweet.full_text,
           likes: tweet.favorite_count,
           retweet: tweet.retweet_count,
-          created_date: moment(tweet.created_at).calendar(),
+          created_date: moment(
+            tweet.created_at,
+            "ddd MMM DD HH:mm:ss Z YYYY"
+          ).calendar(),
           pic_url: tweet.entities.media
             ? tweet.entities.media[0].media_url_https
             : "",

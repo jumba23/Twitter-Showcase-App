@@ -289,75 +289,69 @@ module.exports = content.locals || {};
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _FavoriteNav_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FavoriteNav.css */ "./src/components/FavoriteNav/FavoriteNav.css");
-/* harmony import */ var _FavoriteNav_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_FavoriteNav_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _FavoriteNav_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FavoriteNav.css */ "./src/components/FavoriteNav/FavoriteNav.css");
+/* harmony import */ var _FavoriteNav_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_FavoriteNav_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - TWITTER SHOWCASE APP\\client\\src\\components\\FavoriteNav\\FavoriteNav.js";
 
 
 
-
-const SideNav = ({
-  onSelection
-}) => {
-  const [newUserId, setNewUserId] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    onSelection(newUserId);
-  }, [newUserId]);
+const SideNav = _ref => {
+  let {
+    onSelection
+  } = _ref;
 
   const handleEvent = e => {
-    setNewUserId(e.target.id);
+    onSelection(e.target.id);
   };
 
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
     id: "side-nav",
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("button", {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("button", {
       onClick: handleEvent,
       id: "21814628",
       children: "Australia"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 10,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("button", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("button", {
       onClick: handleEvent,
       id: "22017925",
       children: "Tahiti"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 13,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("button", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("button", {
       onClick: handleEvent,
       id: "705928670150467585",
       children: "World"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 16,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("button", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("button", {
       onClick: handleEvent,
       id: "36054262",
       children: "London"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 19,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("button", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("button", {
       onClick: handleEvent,
       id: "17616232",
       children: "Italy"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 22,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 16,
+    lineNumber: 9,
     columnNumber: 5
   }, undefined);
 };
@@ -427,9 +421,10 @@ var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - T
 
 
 
-const Layout = ({
-  children
-}) => {
+const Layout = _ref => {
+  let {
+    children
+  } = _ref;
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
     id: "container",
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_NavBar_NavBar_js__WEBPACK_IMPORTED_MODULE_0__["default"], {}, void 0, false, {
@@ -542,19 +537,13 @@ var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - T
 
 
 const FavoritesPage = () => {
-  const [tweetData, settweetData] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
-  const [tweetIncludesMediaArray, setTweetIncludesMediaArray] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
-  const [tweetUserInfo, setTweetUserInfo] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
   const [userId, setUserId] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
-  const [finalData, setFinalData] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+  const [favoriteTweetData, setFavoriteTweetData] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     if (userId !== "") {
       gettweetData();
     }
   }, [userId]);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    filterData();
-  }, [tweetIncludesMediaArray, tweetUserInfo]);
 
   const gettweetData = async () => {
     await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/favorites", {
@@ -562,36 +551,8 @@ const FavoritesPage = () => {
         userId: userId
       }
     }).then(response => {
-      settweetData(response.data.data);
-      setTweetIncludesMediaArray(response.data.includes.media);
-      setTweetUserInfo(response.data.includes.users[0]);
+      setFavoriteTweetData(response.data);
     });
-  };
-
-  const filterData = () => {
-    let array = [];
-    tweetData.forEach(tweet => {
-      if (!tweet.attachments) {
-        return;
-      } else {
-        tweetIncludesMediaArray.forEach(e => {
-          if (e.media_key === tweet.attachments.media_keys[0]) {
-            array.push({
-              id: tweet.id,
-              profile_pic: tweetUserInfo.profile_image_url,
-              name: tweetUserInfo.name,
-              userName: tweetUserInfo.username,
-              text: tweet.text,
-              created_date: moment__WEBPACK_IMPORTED_MODULE_2___default()(tweet.created_at).calendar(),
-              mediaType: e.type,
-              pic_url: e.url,
-              vid_url: e.preview_image_url
-            });
-          }
-        });
-      }
-    });
-    setFinalData(array);
   };
 
   const handleEvent = newUserId => {
@@ -604,18 +565,18 @@ const FavoritesPage = () => {
       onSelection: handleEvent
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 31,
       columnNumber: 7
     }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(_TweetCards_TweetCardV2__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      tweetData_v2: finalData
+      tweetData_v2: favoriteTweetData
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 32,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 65,
+    lineNumber: 30,
     columnNumber: 5
   }, undefined);
 };
@@ -703,12 +664,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _TweetCards_TweetCardV1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../TweetCards/TweetCardV1 */ "./src/components/TweetCards/TweetCardV1.js");
-/* harmony import */ var _SearchForm_SearchForm_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SearchForm/SearchForm.js */ "./src/components/SearchForm/SearchForm.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _TweetCards_TweetCardV1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../TweetCards/TweetCardV1 */ "./src/components/TweetCards/TweetCardV1.js");
+/* harmony import */ var _SearchForm_SearchForm_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../SearchForm/SearchForm.js */ "./src/components/SearchForm/SearchForm.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - TWITTER SHOWCASE APP\\client\\src\\components\\Pages\\SearchPage.js";
 
 
@@ -716,30 +675,17 @@ var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - T
 
 
 
-
 const SearchPage = () => {
-  const [searchParam, setSearchParam] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
-  const [tweetData, settweetData] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
-  const [finalData, setFinalData] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+  const [tweetData, setTweetData] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
   const [error, setError] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (searchParam) {
-      gettweetData();
-      setError("");
-    }
-  }, [searchParam]);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    filterData();
-  }, [tweetData]);
 
-  const gettweetData = async () => {
+  const getTweetData = async searchParam => {
     await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("/api/search", {
       params: {
-        searchParam
+        searchParam: searchParam
       }
     }).then(response => {
-      console.log(response);
-      settweetData(response.data);
+      setTweetData(response.data);
     }).catch(error => {
       if (error.response.status) {
         setError(error.response.status);
@@ -747,58 +693,38 @@ const SearchPage = () => {
     });
   };
 
-  const filterData = () => {
-    let array = [];
-
-    if (!error) {
-      tweetData.forEach(tweet => {
-        array.push({
-          id: tweet.id,
-          profile_pic: tweet.user.profile_image_url_https,
-          name: tweet.user.name,
-          userName: tweet.user.screen_name,
-          text: tweet.full_text,
-          likes: tweet.favorite_count,
-          retweet: tweet.retweet_count,
-          created_date: moment__WEBPACK_IMPORTED_MODULE_2___default()(tweet.created_at).calendar(),
-          pic_url: tweet.entities.media ? tweet.entities.media[0].media_url_https : ""
-        });
-      });
+  const handleSubmitedTerm = newSearchParam => {
+    if (newSearchParam) {
+      getTweetData(newSearchParam);
+      setError("");
     }
-
-    setFinalData(array);
   };
 
-  const handleSubmit = newSearchParam => {
-    setSearchParam(newSearchParam);
-    setFinalData([]);
-  };
-
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
     id: "search-page",
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(_SearchForm_SearchForm_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      handleSubmit: handleSubmit
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_SearchForm_SearchForm_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      handleSubmitedTerm: handleSubmitedTerm
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 32,
       columnNumber: 7
-    }, undefined), error !== "" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+    }, undefined), error !== "" ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
       id: "error",
       children: "Please check the screen name you entered and try again"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 34,
       columnNumber: 9
-    }, undefined) : null, /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(_TweetCards_TweetCardV1__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      tweetData_v1: finalData
+    }, undefined) : null, /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_TweetCards_TweetCardV1__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      tweetData_v1: tweetData
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 38,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 66,
+    lineNumber: 31,
     columnNumber: 5
   }, undefined);
 };
@@ -1003,55 +929,65 @@ module.exports = content.locals || {};
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
-/* harmony import */ var _SearchForm_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchForm.css */ "./src/components/SearchForm/SearchForm.css");
-/* harmony import */ var _SearchForm_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_SearchForm_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var _SearchForm_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SearchForm.css */ "./src/components/SearchForm/SearchForm.css");
+/* harmony import */ var _SearchForm_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_SearchForm_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - TWITTER SHOWCASE APP\\client\\src\\components\\SearchForm\\SearchForm.js";
 
 
 
 
-const SearchForm = props => {
-  const submitHandler = e => {
-    e.preventDefault();
-    const searchParam = document.getElementById("search-param").value;
 
-    if (searchParam) {
-      props.handleSubmit(searchParam);
-      document.getElementById("search-param").value = "";
+const SearchForm = _ref => {
+  let {
+    handleSubmitedTerm
+  } = _ref;
+  const [searchParam, setSearchParam] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    if (searchParam !== "") {
+      handleSubmitedTerm(searchParam);
     }
   };
 
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("form", {
-    onSubmit: submitHandler,
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("input", {
+  const handleChange = e => setSearchParam(e.target.value);
+
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("form", {
+    onSubmit: handleSubmit,
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("input", {
       type: "text",
       id: "search-param",
       placeholder: " Search by @user or keyword...",
       autoComplete: "off",
-      required: true
+      required: true,
+      onChange: handleChange,
+      value: searchParam
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 19,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("button", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("button", {
       id: "search-button",
       type: "submit",
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_0__["FaSearch"], {}, void 0, false, {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaSearch"], {}, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 29,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 28,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 15,
+    lineNumber: 18,
     columnNumber: 5
   }, undefined);
 };
@@ -1111,9 +1047,10 @@ var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - T
 
 
 
-const TweetCardV1 = ({
-  tweetData_v1
-}) => {
+const TweetCardV1 = _ref => {
+  let {
+    tweetData_v1
+  } = _ref;
   const [selectImgId, serSelectedImgId] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
 
   const handleEvent = e => {
@@ -1276,9 +1213,10 @@ var _jsxFileName = "C:\\Users\\jumba\\Documents\\SSMD\\Projects\\PROJECT 9.1 - T
 
 
 
-const TweetCardV2 = ({
-  tweetData_v2
-}) => {
+const TweetCardV2 = _ref => {
+  let {
+    tweetData_v2
+  } = _ref;
   const [selectImgId, serSelectedImgId] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
 
   const handleEvent = e => {

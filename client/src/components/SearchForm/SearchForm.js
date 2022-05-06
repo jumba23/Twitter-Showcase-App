@@ -2,13 +2,13 @@ import { useState } from "react";
 import { FaSearch as Search } from "react-icons/fa";
 import "./SearchForm.css";
 
-const SearchForm = (props) => {
+const SearchForm = ({handleSubmitedTerm}) => {
   const [searchParam, setSearchParam] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchParam !== "") {
-      props.handleSubmit(searchParam);
+      handleSubmitedTerm(searchParam);
     }
   };
 

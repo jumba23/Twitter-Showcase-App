@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const moment = require("moment");
 const favoritesRouter = express.Router();
 const axios = require("axios");
 
@@ -18,8 +19,42 @@ favoritesRouter.get("/favorites", (req, res) => {
   axios
     .get(`${SEARCH_URL}${userId}${SEARCH_PARAMETERS}`, token)
     .then(async (response) => {
-      const tweetData = await response.data;
-      res.send(tweetData);
+      const tweetData = await response.data.data;
+      const tweetMediaData = await response.data.includes.media;
+      const tweetUserData = await response.data.includes.users[0];
+
+      const tweetsWithAttachements = tweetData.filter((tweet) => {
+        if (tweet.attachments) return {};
+      });
+
+      const removeExtraMediaKeys = tweetsWithAttachements.map((tweet) => {
+        return tweet.attachments.media_keys[0];
+      });
+
+      const tweetsMedia = removeExtraMediaKeys.map((e) => {
+        const matching = tweetMediaData.filter((tweet) => {
+          const key = tweet.media_key;
+          if (e === key) {
+            return tweet;
+          }
+        });
+        return matching;
+      });
+
+      const finalTweetData = tweetsWithAttachements.map((tweet, i) => {
+        return {
+          tweet: tweet.id,
+          profile_pic: tweetUserData.profile_image_url,
+          name: tweetUserData.name,
+          userName: tweetUserData.username,
+          text: tweet.text,
+          created_date: moment(tweet.created_at).calendar(),
+          mediaType: tweetsMedia[i][0].type,
+          pic_url: tweetsMedia[i][0].url,
+          vid_url: tweetsMedia[i][0].preview_image_url,
+        };
+      });
+      res.send(finalTweetData);
     });
 });
 

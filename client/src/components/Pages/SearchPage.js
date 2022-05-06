@@ -11,8 +11,7 @@ const SearchPage = () => {
     await axios
       .get("/api/search", { params: { searchParam: searchParam } })
       .then((response) => {
-        console.log(response.data)
-        setTweetData(response.data.data);
+        setTweetData(response.data);
       })
       .catch((error) => {
         if (error.response.status) {
@@ -21,7 +20,7 @@ const SearchPage = () => {
       });
   };
 
-  const handleSubmit = (newSearchParam) => {
+  const handleSubmitedTerm = (newSearchParam) => {
     if (newSearchParam) {
       getTweetData(newSearchParam);
       setError("");
@@ -30,7 +29,7 @@ const SearchPage = () => {
 
   return (
     <div id="search-page">
-      <SearchForm handleSubmit={handleSubmit} />
+      <SearchForm handleSubmitedTerm={handleSubmitedTerm} />
       {error !== "" ? (
         <div id="error">
           Please check the screen name you entered and try again
