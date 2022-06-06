@@ -86,4 +86,4 @@ The below instructions can be followed if you want to run this project locally f
        - Start the server and the client simultaneously in development node: npm run dev 
 
 # Author
-Goran Cvetic - Software Developer - [LinkedIn](https://www.linkedin.com/in/goran-cvetic-9aaa4288/) 
+Goran Cvetic - Software Developer - [LinkedIn](https://www.linkedin.com/in/goran-cvetic/) 
